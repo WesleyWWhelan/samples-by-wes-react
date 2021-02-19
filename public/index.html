@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samples by Wes</title>
+    <!-- Google fonts and icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            width:100%;
+            height:100%;
+            margin:0 auto;
+            background-image: url('./files/images/background2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        html,body {
+            position: relative;
+            height: 100%;
+            width:100%;
+            display:inline-block;
+        
+            }
+        .wes-container {
+            margin-left:5%;
+            width: 60%;
+            height: 100%;
+            /* box-shadow: 5px 5px 5px 5px #8888887e; */
+            margin-bottom:2%;
+            float:left;
+            /* filter: blur(3px);
+            -webkit-filter: blur(3px); */
+        }
+        #side{
+            width: 10% !important;
+            float:left;
+            margin-left:5%;
+            box-shadow: 0 0 0 0;
+        }
+
+        .wes-slide {
+            text-align: center;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-size:20px;
+            /* background: rgba(255, 255, 255, 0.404); */
+            background:transparent;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            display:block;
+            justify-content:center;
+            height:300px !important;
+        }
+        .sub-section {
+            width:33%;
+            height:100%;
+            display:block;
+            justify-content:center;
+            align-items:center;
+        }
+        .sub-section ul li {
+            margin-bottom:5px;
+        }
+        audio { 
+            width: 250px; 
+            box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+            border-radius: 90px;
+            }
+        .center-slide {
+            font-family: 'Noto Sans HK', sans-serif;
+            font-size:20px;
+            /* background: rgba(255, 255, 255, 0.404); */
+            background:transparent;
+            height:300px !important;
+            display:flex;
+            flex-direction:row;
+            align-items: center;
+            justify-content:center;
+            flex-grow:1;
+            flex: 1 1 1;
+            align-self:stretch;
+        }
+        #sub-side{
+            height:600px !important;
+            background-size: 100% 100%;
+            background: transparent;
+        }
+        ul{
+            margin-top:0px;
+        }
+        .wes-slide ul{
+            margin-left:0;
+            padding:0
+        }
+        #footer{
+            margin-left:0 !important;
+            width: 100%;
+            height: 5%;
+            margin-bottom:2%;
+            margin-top:2%;
+            background-color:transparent !important;
+            box-shadow: 0px 0px 0px 0px;
+        }
+        #footer-slide{
+            height:50px !important;
+            display:flex;
+            vertical-align:center;
+            align-items:center;
+            justify-content: center;
+            background-color:transparent;
+        }
+        #guitar{
+            /* background-image: url('./files/images/guitar.jpg');
+            background-repeat: no-repeat;
+            background-attachment: scroll; */
+            background-size: 100% 100%;
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+        }
+        #vocals{
+            /* background-image: url('./files/images/vocals.jpg');
+            background-repeat: no-repeat;
+            background-attachment: scroll; */
+            background-size:cover;
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+        }
+        #chords{
+            /* background-image: url('./files/images/chords2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: scroll; */
+            background-size: 100% 100%;
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+        }
+        #noise{
+            /* background-image: url('./files/images/noise.jpg');
+            background-repeat: no-repeat;
+            background-attachment: scroll; */
+            background-size: 100% 100%;
+            filter: blur(2px);
+            -webkit-filter: blur(2px);
+        }
+        li {
+            list-style:none;
+            margin-bottom:50px;
+        }
+        header{
+            background:transparent;
+            line-height: 50px ;
+            width: 100%;
+            font-family: 'Baloo Tamma 2', cursive;
+            margin-bottom:25px;
+      }
+        .head_container{
+            display:flex;
+        }
+        #page_title{
+            width:20%;
+            max-height:100px;
+            overflow:hidden;
+            margin-left:20px;
+            margin-top:0;
+            float:left;
+            display:flex;
+            vertical-align:middle;
+            justify-content:left;
+        }
+        #title_a{
+            vertical-align:center;
+            justify-content:center;
+            overflow:hidden;
+            display:flex;
+        }
+        #title_a img{
+            vertical-align:center;
+            justify-content:center;
+        }
+        .link{
+            text-decoration: underline;
+            color:black;
+            font-size: 30px;
+            margin-right:50px;
+
+        }
+        #linkdiv{
+            vertical-align:center;
+            display:flex;
+            justify-content:flex-end;
+            max-height:100px;
+            margin-left:auto;
+        }
+        .sub-header{
+            background:transparent;
+            line-height: 50px ;
+            width: 100%;
+            font-family: 'Baloo Tamma 2', cursive;
+            display:flex;
+        }
+        .sub-header-stuff{
+            margin: auto;
+            width: 60%;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            vertical-align: center;
+            border: 5px black;
+            border-style: solid none;
+            border-width:1px;
+        }
+        .sub-header-stuff a{
+            margin-left:40px;
+            margin-right:40px;
+            font-size:18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight:bolder;
+        }
+        a {
+            cursor:pointer;
+        }
+        h1{
+            font-size:larger;
+            font-weight: 500;
+            margin-top:0;
+        }
+
+        input, textarea {
+            font-family: 'Noto Sans HK', sans-serif;
+        }
+    </style>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script> //config
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyBHfrzfY7CuyNWBcfU6nZirL4MaBKBGnbI",
+        authDomain: "samples-by-wes.firebaseapp.com",
+        projectId: "samples-by-wes",
+        storageBucket: "samples-by-wes.appspot.com",
+        messagingSenderId: "797682855931",
+        appId: "1:797682855931:web:ca990df11c032d11ade55e",
+        measurementId: "G-XGT9DQHE29"
+    };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      </script>
+
+  </head>
+  <style>
+    .rhap_container{
+      border-radius: 0%;
+    }
+    .apli{
+      size: 20%;
+    }
+  </style>
+  <div id='root'>
+
+    
+  </div>
+</html>
