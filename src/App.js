@@ -39,6 +39,19 @@ let eleven = new Sample('https://firebasestorage.googleapis.com/v0/b/samples-by-
 let twelve = new Sample('https://firebasestorage.googleapis.com/v0/b/samples-by-wes.appspot.com/o/95%20F%23%20Dark%20guitar.wav?alt=media&token=ae999509-82c8-44c9-887e-d031d8404830',
               'Guitar','Trap',true,['dark','creepy'],'F# Major','95')
 
+let thirteen = new Sample('https://firebasestorage.googleapis.com/v0/b/samples-by-wes.appspot.com/o/79%20Cminor-choppy%20strums%20-%20dry.wav?alt=media&token=5178feb7-c90d-4cf2-bef4-a0b7eb2a9c18',
+              'Guitar','dance pop',false,['nostalgia','melancholy','sad'],'C Minor','79')
+let fourteen = new Sample('https://firebasestorage.googleapis.com/v0/b/samples-by-wes.appspot.com/o/79%20Cminor-choppy%20strums-wet.wav?alt=media&token=97058ff5-88d9-48b9-b383-c19c8a2edda3',
+              'Guitar','dance pop',true,['nostalgia','melancholy','sad'],'C Minor','79')
+let fifteen = new Sample('https://firebasestorage.googleapis.com/v0/b/samples-by-wes.appspot.com/o/79%20Cminor-fingerpicking-dry.wav?alt=media&token=13376dbe-d56e-4ea8-9bd8-32e5bd9cca46',
+              'Guitar','dance pop',false,['nostalgia','melancholy','sad'],'C Minor','79')
+let sixteen = new Sample('https://firebasestorage.googleapis.com/v0/b/samples-by-wes.appspot.com/o/79%20Cminor-fingerpicking-wet.wav?alt=media&token=f8a6d6ea-02f8-4cfc-bd67-0536a3f11207',
+              'Guitar','dance pop',true,['nostalgia','melancholy','sad'],'C Minor','79')
+let seventeen = new Sample('https://firebasestorage.googleapis.com/v0/b/samples-by-wes.appspot.com/o/79%20Cminor-strums-dry.wav?alt=media&token=0e5da17b-29c6-4663-a388-e51eea5713b6',
+              'Guitar','dance pop',false,['nostalgia','melancholy','sad'],'C Minor','79')
+let eighteen = new Sample('https://firebasestorage.googleapis.com/v0/b/samples-by-wes.appspot.com/o/79%20Cminor-strums-wet.wav?alt=media&token=7fb290d5-74b7-49d3-abae-c5a299f05b33',
+              'Guitar','dance pop',true,['nostalgia','melancholy','sad'],'C Minor','79')
+
 let Samples = [
   one,
   two,
@@ -51,7 +64,13 @@ let Samples = [
   nine,
   ten,
   eleven,
-  twelve
+  twelve,
+  thirteen,
+  fourteen,
+  fifteen,
+  sixteen,
+  seventeen,
+  eighteen
 ]
 
 
@@ -126,64 +145,124 @@ function App() {
         </div> 
         <div onclick="location.href='#';" style={{"cursor":"pointer"}} className="wes-container">
           <div className="center-slide">
-            <div className="sub-section">
-              <ul style={{"padding-inline-start":"0px !important","-webkit-align-items":"center","-webkit-box-align":"center","-ms-flex-align":"center","align-items":"center"}}>
-                <h1>Most Popular</h1>
+            <div className="sub-section2">
+              <ul style={{"padding-inline-start":"0px !important","padding-bottom":"25px","-webkit-align-items":"center","-webkit-box-align":"center","-ms-flex-align":"center","align-items":"center"}}>
                 <li>
-                  {one.instrument}
+                  {two.bpm} ---- {two.key}
                     <AudioPlayer
-                    autoPlay
-                    src={one.link}
+                    src={two.link}
                     onPlay={e => console.log("onPlay")}
                     // other props here
                     />
                 </li>
                 <li>
-                  {two.instrument}
+                  {four.bpm} ---- {four.key}
                   <AudioPlayer
-                    autoPlay
-                    src={two.link}
-                    onPlay={e => console.log("onPlay")}
-                    // other props here
-                  />
-                </li>
-                <li>
-                  {three.instrument}
-                  <AudioPlayer
-                    autoPlay
-                    src={three.link}
-                    onPlay={e => console.log("onPlay")}
-                    // other props here
-                  />
-                </li>
-              </ul>
-            </div>
-            <div className="sub-section">
-              <ul style={{"padding-inline-start":"0px !important","-webkit-align-items":"center","-webkit-box-align":"center","-ms-flex-align":"center","align-items":"center"}}>
-                <h1>Most Popular</h1>
-                <li>
-                  {four.instrument}
-                  <AudioPlayer
-                    autoPlay
                     src={four.link}
                     onPlay={e => console.log("onPlay")}
                     // other props here
                   />
                 </li>
                 <li>
-                  {five.instrument}
+                  {six.bpm} ---- {six.key}
                   <AudioPlayer
-                    autoPlay
-                    src={five.link}
+                    src={six.link}
                     onPlay={e => console.log("onPlay")}
                     // other props here
                   />
                 </li>
-                <li className='apli'>
-                  {six.instrument}
+                <li>
+                  {seven.bpm} ---- {seven.key}
                   <AudioPlayer
-                    autoPlay
-                    src={six.link}
+                    src={seven.link}
+                    onPlay={e => console.log("onPlay")}
+                    // other props here
+                  />
+                </li>
+                <li>
+                  {eight.bpm} ---- {eight.key}
+                  <AudioPlayer
+                    src={eight.link}
+                    onPlay={e => console.log("onPlay")}
+                    // other props here
+                  />
+                </li>
+                <li>
+                  {nine.bpm} ---- {nine.key}
+                  <AudioPlayer
+                    src={nine.link}
+                    onPlay={e => console.log("onPlay")}
+                    // other props here
+                  />
+                </li>
+                <li>
+                  {ten.bpm} ---- {ten.key}
+                  <AudioPlayer
+                    src={ten.link}
+                    onPlay={e => console.log("onPlay")}
+                    // other props here
+                  />
+                </li>
+                <li>
+                  {eleven.bpm} ---- {eleven.key}
+                  <AudioPlayer
+                    src={eleven.link}
+                    onPlay={e => console.log("onPlay")}
+                    // other props here
+                  />
+                </li>
+                <li>
+                  {twelve.bpm} ---- {twelve.key}
+                  <AudioPlayer
+                    src={twelve.link}
+                    onPlay={e => console.log("onPlay")}
+                    // other props here
+                  />
+                </li>
+                {/* <li>
+                  {thirteen.bpm} ---- {thirteen.key}
+                  <AudioPlayer
+                    src={thirteen.link}
+                    onPlay={e => console.log("onPlay")}
+                    // other props here
+                  />
+                </li> */}
+                <li>
+                  {fourteen.bpm} ---- {fourteen.key}
+                  <AudioPlayer
+                    src={fourteen.link}
+                    onPlay={e => console.log("onPlay")}
+                    // other props here
+                  />
+                </li>
+                {/* <li>
+                  {fifteen.bpm} ---- {fifteen.key}
+                  <AudioPlayer
+                    src={fifteen.link}
+                    onPlay={e => console.log("onPlay")}
+                    // other props here
+                  />
+                </li> */}
+                <li>
+                  {sixteen.bpm} ---- {sixteen.key}
+                  <AudioPlayer
+                    src={sixteen.link}
+                    onPlay={e => console.log("onPlay")}
+                    // other props here
+                  />
+                </li>
+                {/* <li>
+                  {seventeen.bpm} ---- {seventeen.key}
+                  <AudioPlayer
+                    src={seventeen.link}
+                    onPlay={e => console.log("onPlay")}
+                    // other props here
+                  />
+                </li> */}
+                <li>
+                  {eighteen.bpm} ---- {eighteen.key}
+                  <AudioPlayer
+                    src={eighteen.link}
                     onPlay={e => console.log("onPlay")}
                     // other props here
                   />
